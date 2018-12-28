@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <tabber></tabber>
+    <tabber v-show="$store.state.isShow"></tabber>
     <!-- 路由容器 -->
     <router-view></router-view>
   </div>

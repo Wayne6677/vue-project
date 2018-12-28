@@ -1,6 +1,6 @@
 <template>
 	<div class="box" v-if="isShow">
-	<a href="javascript:;">
+	<a href="javascript:;" @click="handleClick(urllist[4])" >
 		<img :src="datalist[0].main_image" />
 		<div>
 			<strong>{{datalist[0].main_title}}</strong>
@@ -20,7 +20,13 @@
 			data(){
 				return{
 					datalist:[],
+					urllist:[],
 					isShow:false
+				}
+			},
+			methods:{
+				handleClick(id){
+					 this.$router.push(`/brand/${id}`);
 				}
 			},
 			mounted(){
@@ -31,6 +37,8 @@
 				}).then(res=>{
 					console.log(res.data.banners)
 					this.datalist=res.data.banners
+					 var str = res.data.banners[0].link_url
+					this.urllist= str.split("/");
 					this.$nextTick(()=>{
 						this.isShow = true
 					})

@@ -12,6 +12,7 @@ import Upcoming from "../components/upcoming"
 import Lifestyle from "../components/lifestyle"
 import Kids from "../components/kids"
 import Silo from "../components/silo"
+import Brand from "../components/brand"
 Vue.use(Router) //Vue.use() 明确地安装路由功能
 
 const router = new Router({
@@ -72,6 +73,10 @@ const router = new Router({
 		{
 			path:'/upcoming',
 			component:Upcoming
+		},
+		{
+			path:'/brand/:id',
+			component:Brand
 		},
 		{
 			path:'*',

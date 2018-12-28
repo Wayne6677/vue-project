@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import axios from "axios"
 Vue.use(Vuex) 
 
-var MY_HIDE = "hideMeilihuiTabbar"
+var MY_HIDE = "hideTabbar"
 const store = new Vuex.Store({
 	state:{
 		isShow:true,
@@ -12,18 +12,18 @@ const store = new Vuex.Store({
 	},
 
 	actions:{
-		getComingSoonListRequest(store){
-			console.log("数据请求")
+		// getComingSoonListRequest(store){
+		// 	console.log("数据请求")
 
-			axios({
-				url:"http://www.mei.com/appapi/silo/eventForH5?categoryId=women&pageIndex=1&timestamp=1545869935000&summary=fd48a81043d3599f1547e6f4915a0b92&platform_code=H5",
-				method: 'get'
+		// 	axios({
+		// 		url:"http://www.mei.com/appapi/silo/eventForH5?categoryId=women&pageIndex=1&timestamp=1545869935000&summary=fd48a81043d3599f1547e6f4915a0b92&platform_code=H5",
+		// 		method: 'get'
 				
-			}).then(res=>{
-				console.log(res.data) 
-				store.commit("setDatalist",res.data.eventList)
-			})
-		}
+		// 	}).then(res=>{
+		// 		console.log(res.data) 
+		// 		store.commit("setDatalist",res.data.eventList)
+		// 	})
+		// }
 	},
 
 
@@ -32,13 +32,13 @@ const store = new Vuex.Store({
 			state.isShow = false;
 		},
 
-		showMaizuoTabbar(state,payload){
+		showTabbar(state,payload){
 			state.isShow = true;
-		},
-
-		setDatalist(state,payload){
-			state.datalist= payload;
 		}
+
+		// setDatalist(state,payload){
+		// 	state.datalist= payload;
+		// }
 	}
 })
 

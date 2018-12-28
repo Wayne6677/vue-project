@@ -13,6 +13,7 @@ import Lifestyle from "../components/lifestyle"
 import Kids from "../components/kids"
 import Silo from "../components/silo"
 import Brand from "../components/brand"
+import Productlist from "../components/productlist"
 Vue.use(Router) //Vue.use() 明确地安装路由功能
 
 const router = new Router({
@@ -78,6 +79,11 @@ const router = new Router({
 			path:'/brand/:id',
 			component:Brand
 		},
+		{
+			path:'/productlist/:id',
+			component:Productlist
+		},
+
 		{
 			path:'*',
 			redirect:'/login/mobile'

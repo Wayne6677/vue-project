@@ -40,7 +40,7 @@
 
 		methods:{
 			handleClick(id){	
-				// this.$router.push(`/productdetail/${id}`);
+				this.$router.push(`/productdetail/${id}`);
 			},
 
 			loadMore(){

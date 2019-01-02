@@ -1,8 +1,6 @@
 <template>
 	<div>
-		<div class="menbanner">
-			<img src="http://cdn13.mei.com/category/20181025/eee1843e341734175bb87eca2632c8bfce6dc3676f54cd06.jpg">
-		</div>
+		<menbanner></menbanner>
 		<ul v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-immediate-check = "false" infinite-scroll-distance="0">
 			<li v-for="data in datalist" @click="handleClick(data.eventId)" :key="data.eventId">
 				<span class="chineseName">{{data.chineseName}}</span>
@@ -11,10 +9,12 @@
 				<img :src="data.imageUrl"/>
 			</li>
 		</ul>
+
 	</div>
 </template>
 
 <script >
+	import menbanner from "./menbanner"
 	import axios from "axios"
 	export default {
 			data(){
@@ -24,6 +24,9 @@
 					current:1,
 					pageIndex:0
 				}
+			},
+			components:{
+				menbanner
 			},
 
 			mounted(){
@@ -64,13 +67,7 @@
 </script>
 
 <style scoped lang="scss">
-.menbanner{
-	img{
-		width:100%;
-		overflow:hidden;
-		display:block;
-	}
-}
+
 
 ul{
 	li{

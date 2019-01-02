@@ -87,6 +87,23 @@
 				    }
 				    
 				}
+		// .itemtext{
+		// 		text-align: left;
+		// 		position: absolute;
+		// 		bottom: 2%;
+		// 		left: 3%;
+		// 		color: rgb(255, 255, 255);
+		// 		font-family: -apple-system, BlinkMacSystemFont, "'PingFang SC'", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		// 		background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.55));
+		// 		width: 94%;
+		// 		height: 50%;
+
+		// 		.inner{
+		// 			padding-top: 40px;
+		// 			padding-left: 10px
+		// 		}
+
+		// 	}
 			}
 		}
 	}
